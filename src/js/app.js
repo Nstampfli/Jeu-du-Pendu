@@ -5,7 +5,12 @@ const listOfWords = ['voiture', 'maison', 'soupe', 'air', 'ciel', 'pikachu', 'po
 let numberMistake = 0;
 let letterRemaining= 0;
 
+function replay() {
+  document.location.reload(true);
+}
+
 $replay.addEventListener('click', replay)
+
 (function play() {
   randomNumber();
 }());
@@ -59,6 +64,3 @@ function looseVerification() {
   }
 }
 
-function replay() {
-  document.location.reload(true);
-}
