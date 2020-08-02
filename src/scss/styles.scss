@@ -3,6 +3,9 @@
 }
 .pendu.win{
   background-color: rgb(3, 77, 0);
+  .pendu__words,.pendu__letters{
+    display: none;
+  }
 }
 .pendu.loose{
   background-color: rgb(70, 0, 0);
