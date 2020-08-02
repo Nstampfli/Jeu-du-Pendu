@@ -1,9 +1,11 @@
 const $letters = document.querySelectorAll(".pendu__letter");
 const $wordsDiv = document.querySelector(".pendu__words")
-const listOfWords = ['voiture', 'maison', 'ventilateur', 'air', 'ciel', 'pikachu'];
+const $replay = document.querySelector(".pendu__replay")
+const listOfWords = ['voiture', 'maison', 'soupe', 'air', 'ciel', 'pikachu', 'portable','clavier', 'chaise', 'chat', 'rouge', 'france', 'ecran', 'socle','tapis','banque','argent','hamac','ardoise', 'livre', 'fiche','bureau','nez','bouche','oeil','touche'];
 let numberMistake = 0;
 let letterRemaining= 0;
 
+$replay.addEventListener('click', replay)
 (function play() {
   randomNumber();
 }());
@@ -47,15 +49,16 @@ function wordVerification(letter, index , word) {
 function winVerification(word) {
   letterRemaining++
   if(word.length === letterRemaining){
-    window.alert("Gagné");
+    replay()
   }
 }
 
 function looseVerification() {
   if(numberMistake === 5){
-    window.alert("Perdu");
+    replay()
   }
 }
 
-
-
+function replay() {
+  document.location.reload(true);
+}
