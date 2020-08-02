@@ -1,3 +1,5 @@
+const $body = document.querySelector(".pendu")
+const $mainTitle = document.querySelector(".pendu__mainTitle")
 const $letters = document.querySelectorAll(".pendu__letter");
 const $wordsDiv = document.querySelector(".pendu__words")
 const $replay = document.querySelector(".pendu__replay")
@@ -54,13 +56,15 @@ function wordVerification(letter, index , word) {
 function winVerification(word) {
   letterRemaining++
   if(word.length === letterRemaining){
-    replay()
+    $body.classList.add("win");
+    $mainTitle.textContent ='GAGNE'
   }
 }
 
 function looseVerification() {
   if(numberMistake === 5){
-    replay()
+    $body.classList.add("loose");
+    $mainTitle.textContent ='PERDU'
   }
 }
 

@@ -1,14 +1,23 @@
 * {
   box-sizing: border-box;
 }
-
+.pendu.win{
+  background-color: rgb(3, 77, 0);
+}
+.pendu.loose{
+  background-color: rgb(70, 0, 0);
+  .pendu__words,.pendu__letters{
+    display: none;
+  }
+}
 .pendu{
   background-color: rgb(25 , 25, 25);
+  transition: all 1.5s ease-in-out;
   width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
   display:flex ;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   &__mainTitle{
     color: rgb(255, 229, 83);
